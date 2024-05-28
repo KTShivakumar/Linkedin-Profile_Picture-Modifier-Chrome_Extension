@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Modify Linkedin Profile Pictures",
+    "version": "1.0",
+    "description": "This Chrome extension will modify profile pictures on the LinkedIn homepage involves\n leveraging web development skills and understanding Chrome's extension architecture. The extension will employ JavaScript to target profile picture elements on the LinkedIn page,\n manipulating their attributes to display a chosen image. This process requires identifying the relevant HTML elements through inspection tools like Chrome Developer Tools,\n ensuring accurate selection for replacement. Testing is crucial to guarantee seamless functionality across various scenarios,\n including dynamic or asynchronous loading of profile pictures. Debugging tools assist in resolving any issues encountered during testing, ensuring the extension operates smoothly.\n this project offers a practical opportunity to interact with dynamic web content, enhancing the browsing experience by customizing visual elements on the LinkedIn platform."
+    ,
+    "permissions": [
+      "activeTab",
+      "declarativeContent"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "icons/Linkedin.png",
+      "48": "icons/Linkedin.png",
+      "128": "icons/Linkedin.png"
+    },
+    "action": {
+      "default_icon": {
+        "16": "icons/Linkedin.png",
+        "48": "icons/Linkedin.png",
+        "128": "icons/Linkedin.png"
+      }
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "my_pic.jpg",
+          "assets/client-cc99106f.js"
+        ],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
